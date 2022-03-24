@@ -1,0 +1,13 @@
+
+name: Hello github CI
+on: [push]
+jobs:
+  run_index:
+    runs-on: node:latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: node .index.js
+  helloCI:
+    runs-on: node:latest
+    steps:
+      - run: echo "Hello!!!"
